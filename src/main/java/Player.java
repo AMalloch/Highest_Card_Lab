@@ -10,8 +10,8 @@ public class Player {
         this.playerhand = new ArrayList<>();
     }
 
-    public void addHand(Hand hand){
-        this.playerhand.add(hand);
+    public void addCard(Card card){
+        this.addCard(card);
     }
 
     public int hasHand(){

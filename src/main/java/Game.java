@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class Game {
     private String name;
-    private ArrayList<Deck> player1;
-    private ArrayList<Deck> player2;
+    private ArrayList<Player> player1;
+    private ArrayList<Player> player2;
 
     public Game(String name) {
         this.name = name;
@@ -14,8 +14,7 @@ public class Game {
 
     public void dealCardToPlayer1(Deck deck, Hand hand, Card card, Player player){
         deck.shuffleDeck();
-        hand.addCard(card);
-        player.addHand(hand);
+        player.addCard(card);
         this.player1.add(player);
     }
 

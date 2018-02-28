@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 public class PlayerTest {
     Player player;
     Hand hand;
+    Card card;
 
     @Before
     public void before(){
@@ -13,8 +14,8 @@ public class PlayerTest {
     }
 
     @Test
-    public void addHandToPlayer(){
-        player.addHand(hand);
+    public void addCardToPlayer(){
+        player.addCard(hand, card);
         assertEquals(1, player.hasHand());
     }
 }
