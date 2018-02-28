@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Deck {
-    private ArrayList<Card> deck = new ArrayList<Card>(52);
+    private ArrayList<Card> deck;
 
     public Deck(){
         this.deck = deck;
@@ -9,10 +9,9 @@ public class Deck {
 
     public void fillArray(Card card){
         for(SuitType suit : SuitType.values()) {
-            for (ValueType value : ValueType.values()) {
-                for (int c = 0; c < 52; c++) {  // c for card
-                    this.deck.add(card(suit, value));
-                }
+            for (ValueType value : ValueType.values()){  // c for card
+                    this.deck.add(card);
+
             }
         }
     }
