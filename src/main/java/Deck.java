@@ -1,23 +1,27 @@
 import java.util.ArrayList;
 
 public class Deck {
-    private ArrayList<Card> deck;
+    private ArrayList<Card> cards;
 
     public Deck(){
-        this.deck = deck;
+        this.cards = new ArrayList<>();
     }
 
-    public void fillArray(Card card){
+    public void createDeck(){
         for(SuitType suit : SuitType.values()) {
-            for (ValueType value : ValueType.values()){  // c for card
-                    this.deck.add(card);
-
+            for (ValueType value : ValueType.values()){
+                Card card = new Card(suit, value);
             }
         }
     }
 
+    public void addCards(){
+        this.createDeck();
+//        this.cards.createDeck()
+    }
+
     public int countDeck(){
-        return this.deck.size();
+        return this.cards.size();
     }
 
 }

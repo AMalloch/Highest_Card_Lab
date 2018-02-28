@@ -8,7 +8,7 @@ public class Game {
 
     public Game(String name) {
         this.name = name;
-        this.player1 = new ArrayList<Deck>();
-        this.player2 = new ArrayList<Deck>();
+        this.player1 = new ArrayList<>();
+        this.player2 = new ArrayList<>();
     }
 }

@@ -14,8 +14,10 @@ public class DeckTest {
 
     @Test
     public void countDeck(){
-        deck.fillArray(card);
+        deck.createDeck();
         assertEquals(52, deck.countDeck());
     }
+
+    // test for card
 
 }

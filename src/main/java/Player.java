@@ -7,6 +7,6 @@ public class Player {
 
     public Player (String name){
         this.name = name;
-        this.playerhand = playerhand;
+        this.playerhand = new ArrayList<>();
     }
 }
