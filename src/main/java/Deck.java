@@ -11,13 +11,9 @@ public class Deck {
         for(SuitType suit : SuitType.values()) {
             for (ValueType value : ValueType.values()){
                 Card card = new Card(suit, value);
+                this.cards.add(card);
             }
         }
-    }
-
-    public void addCards(){
-        this.createDeck();
-//        this.cards.createDeck()
     }
 
     public int countDeck(){
