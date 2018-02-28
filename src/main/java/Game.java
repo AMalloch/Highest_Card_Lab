@@ -11,4 +11,13 @@ public class Game {
         this.player1 = new ArrayList<>();
         this.player2 = new ArrayList<>();
     }
+
+    public void dealCardToPlayer1(Deck deck, Hand hand, Card card, Player player){
+        deck.shuffleDeck();
+        hand.addCard(card);
+        player.addHand(hand);
+        this.player1.add(player);
+    }
+
+
 }

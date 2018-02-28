@@ -1,7 +1,10 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class DeckTest {
     Deck deck;
@@ -18,6 +21,19 @@ public class DeckTest {
         assertEquals(52, deck.countDeck());
     }
 
-    // test for card
+    @Test
+    public void deal(){
+        deck.createDeck();
+        deck.deal(0);
+        assertEquals(51, deck.countDeck());
+    }
+
+    @Test
+    public void canGetRandomCard(){
+        deck.createDeck();
+        ArrayList results = deck.getCard();
+        Card randomCard = deck.shuffleDeck();
+        assertTrue(results.contains(randomCard));
+    }
 
 }
